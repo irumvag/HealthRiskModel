@@ -1,0 +1,20 @@
+id,Age,In_days,Vaccine,Dose,Notes
+0,Pre-birth,-1,Tetanus toxoid,2,"Do not exceed 5 doses during life"
+1,Birth,0,BCG,1,Bacillus Calmette-Gurin
+2,Birth,0,OPV,1,Oral Polio Vaccine
+3,6 weeks,48,OPV,2,Oral Polio Vaccine
+4,6 weeks,48,DTP-HepB-Hib,1,"Diphtheria, Tetanus, Pertussis, Hepatitis B, Hib"
+5,6 weeks,48,PCV13,1,"Pneumococcal, 13-valent"
+6,6 weeks,48,Rotarix,1,Rotavirus
+7,10 weeks,70,OPV,3,Oral Polio Vaccine
+8,10 weeks,70,DTP-HepB-Hib,2,"Diphtheria, Tetanus, Pertussis, Hepatitis B, Hib"
+9,10 weeks,70,PCV13,2,"Pneumococcal, 13-valent"
+10,10 weeks,70,Rotarix,2,Rotavirus
+11,14 weeks,98,OPV,4,Oral Polio Vaccine
+12,14 weeks,98,IPV,1,Inactivated Polio Vaccine
+13,14 weeks,98,DTP-HepB-Hib,3,"Diphtheria, Tetanus, Pertussis, Hepatitis B, Hib"
+14,14 weeks,98,PCV13,3,"Pneumococcal, 13-valent"
+15,9 months,270,MR,1,Measles-Rubella
+16,15 months,450,MR,2,Measles-Rubella
+17,2 Years,720,HPV,1,Human papillomavirus  with a 6 months interval between 2 doses
+18,2.5 Years,900,HPV,1,Human papillomavirus  with a 6 months interval between 2 doses
