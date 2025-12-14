@@ -16,6 +16,9 @@ from sklearn.ensemble import GradientBoostingClassifier, RandomForestClassifier
 from imblearn.over_sampling import SMOTE
 from preprocessing import processed_df
 import joblib
+import matplotlib.pyplot as plt
+from classification_error_plots import multi_model_class_error_plots
+
 
 # =========================================
 # 1. Define features and target
@@ -120,6 +123,7 @@ results = {}
 best_name = None
 best_macro_f1 = -1.0
 best_clf = None
+preds_by_model = {}
 
 for name, clf in models.items():
     print(f"\n=== Training {name} (with SMOTE) ===")
@@ -141,6 +145,20 @@ for name, clf in models.items():
         best_macro_f1 = macro_f1
         best_name = name
         best_clf = clf
+    preds_by_model[name] = y_pred  # store for plotting later
+# =========================================
+# 7. Multi-panel prediction error plots
+# =========================================
+print("\nGenerating multi-model prediction error plots...")
+multi_model_class_error_plots(
+    y_true=y_test,
+    preds_by_model=preds_by_model,
+    ncols=3,
+    figsize=(12, 6),
+    save_path="figures/prediction_error_plots_multimodel.png",
+    suptitle="Prediction Error Plots for Daily Health-Risk Models"
+)
+
 
 print("\nModel macro F1 scores (SMOTE):", results)
 print("Best model (SMOTE):", best_name, "with macro F1 =", best_macro_f1)
